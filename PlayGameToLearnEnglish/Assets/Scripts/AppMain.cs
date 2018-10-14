@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class AppMain : MonoBehaviour {
     [SerializeField]
@@ -19,8 +20,16 @@ public class AppMain : MonoBehaviour {
     [SerializeField]
     private Image imgSound;
 
+    [SerializeField]
+    private GameObject gObjRate;
+
+    public float timeRotate = 0.5f;
+
     bool isSoundOn;
     bool isInit;
+
+    Sequence rateSequence;
+    
 
     // Use this for initialization
     void Start () {
@@ -33,6 +42,17 @@ public class AppMain : MonoBehaviour {
             return;
         isInit = true;
         OnupdateSound();
+        OnAutoRotationBtnRate();
+    }
+
+    void OnAutoRotationBtnRate()
+    {
+        if (rateSequence == null)
+            rateSequence = DOTween.Sequence();
+        rateSequence.Append(gObjRate.transform.DORotate(new Vector3(0, 0, 45), timeRotate));
+        rateSequence.Append(gObjRate.transform.DORotate(new Vector3(0, 0, -45), timeRotate));
+        rateSequence.Append(gObjRate.transform.DORotate(new Vector3(0, 0, 0), timeRotate/2));
+        rateSequence.SetLoops(-1);
     }
 
     void OnupdateSound()
