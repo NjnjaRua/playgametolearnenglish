@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224746503877005534}
-  - component: {fileID: 222629099448151558}
-  - component: {fileID: 114528801944237562}
+  - component: {fileID: 222624475630665310}
+  - component: {fileID: 114096988815095100}
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 222596453257948734}
   - component: {fileID: 114670793697571724}
   - component: {fileID: 114995960566226056}
+  - component: {fileID: 114106602690393954}
   m_Layer: 5
   m_Name: BtnSound
   m_TagString: Untagged
@@ -90,6 +91,7 @@ GameObject:
   - component: {fileID: 222610289547042516}
   - component: {fileID: 114676234932320868}
   - component: {fileID: 114924706395496866}
+  - component: {fileID: 114925478977841654}
   m_Layer: 5
   m_Name: BtnShare
   m_TagString: Untagged
@@ -141,6 +143,7 @@ GameObject:
   - component: {fileID: 224822916642966336}
   - component: {fileID: 222554081318812098}
   - component: {fileID: 114049541400569322}
+  - component: {fileID: 114457927210161500}
   m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
@@ -211,6 +214,7 @@ GameObject:
   - component: {fileID: 222785435156350318}
   - component: {fileID: 114630065424062830}
   - component: {fileID: 114367818387115944}
+  - component: {fileID: 114203577543055348}
   m_Layer: 5
   m_Name: BtnRate
   m_TagString: Untagged
@@ -229,6 +233,7 @@ GameObject:
   - component: {fileID: 222156541483529058}
   - component: {fileID: 114767826560372552}
   - component: {fileID: 114471869867910304}
+  - component: {fileID: 114733037947031968}
   m_Layer: 5
   m_Name: BtnGetFreeDiamond
   m_TagString: Untagged
@@ -245,8 +250,9 @@ GameObject:
   m_Component:
   - component: {fileID: 224295960008730362}
   - component: {fileID: 222445853547142800}
-  - component: {fileID: 114037839346881994}
   - component: {fileID: 114575137914012802}
+  - component: {fileID: 114827671466347394}
+  - component: {fileID: 114066125018792866}
   m_Layer: 5
   m_Name: BtnHighScore
   m_TagString: Untagged
@@ -322,33 +328,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114037839346881994
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1697085336467800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 008f34e7c49f8a940b1d6ab750261830, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
 --- !u!114 &114049541400569322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,7 +347,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cecaeb9c08b70464184900f86f453503, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -410,6 +389,21 @@ MonoBehaviour:
   m_Spacing: {x: 60, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 3
+--- !u!114 &114066125018792866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697085336467800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8c2cfbff6f78243bc84858caf11ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAtlas: {fileID: 4343727234628468602, guid: 25fcdbe3b489e944b98bafdf1c193cf2,
+    type: 2}
+  spriteType: 4
+  img: {fileID: 114827671466347394}
 --- !u!114 &114089510433407824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -739,6 +733,48 @@ MonoBehaviour:
     m_TypeName: DoozyUI.UIElement+TriggerEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   animationManager: {fileID: 114057446012375084}
+--- !u!114 &114096988815095100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006360109144226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 6a0776f7b9a8dbc4fb51a3a6749f121e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114106602690393954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116145502056338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8c2cfbff6f78243bc84858caf11ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAtlas: {fileID: 4343727234628468602, guid: 25fcdbe3b489e944b98bafdf1c193cf2,
+    type: 2}
+  spriteType: 9
+  img: {fileID: 114670793697571724}
 --- !u!114 &114108497546893342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -824,6 +860,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114203577543055348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569227695655992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8c2cfbff6f78243bc84858caf11ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAtlas: {fileID: 4343727234628468602, guid: 25fcdbe3b489e944b98bafdf1c193cf2,
+    type: 2}
+  spriteType: 6
+  img: {fileID: 114630065424062830}
 --- !u!114 &114296187687124204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -910,6 +961,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114457927210161500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282882089925528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8c2cfbff6f78243bc84858caf11ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAtlas: {fileID: 4343727234628468602, guid: 3f7746bd8441a4a4983a91413ef1487c,
+    type: 2}
+  spriteType: 15
+  img: {fileID: 114049541400569322}
 --- !u!114 &114471869867910304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -986,33 +1052,6 @@ MonoBehaviour:
   m_Spacing: {x: 60, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 2
---- !u!114 &114528801944237562
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1006360109144226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6a0776f7b9a8dbc4fb51a3a6749f121e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
 --- !u!114 &114567126273917026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1082,7 +1121,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114037839346881994}
+  m_TargetGraphic: {fileID: 114827671466347394}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1118,7 +1157,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 727daf1d611f1004cb2385408e45a4f9, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1145,7 +1184,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f21838ef9f8dc2c489d3bc0529e6e00c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1172,7 +1211,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f78873b41b5de8e4cac8133112684a48, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1213,6 +1252,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Get Free Diamond
+--- !u!114 &114733037947031968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658637819693644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8c2cfbff6f78243bc84858caf11ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAtlas: {fileID: 4343727234628468602, guid: 25fcdbe3b489e944b98bafdf1c193cf2,
+    type: 2}
+  spriteType: 2
+  img: {fileID: 114767826560372552}
 --- !u!114 &114743624971952952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1252,7 +1306,34 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 962481548bb8c0347ad436a5951a9fde, type: 3}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114827671466347394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697085336467800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1346,6 +1427,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114925478977841654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146879990671700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8c2cfbff6f78243bc84858caf11ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAtlas: {fileID: 4343727234628468602, guid: 25fcdbe3b489e944b98bafdf1c193cf2,
+    type: 2}
+  spriteType: 10
+  img: {fileID: 114676234932320868}
 --- !u!114 &114962036016917018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1535,7 +1631,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1146879990671700}
   m_CullTransparentMesh: 0
---- !u!222 &222629099448151558
+--- !u!222 &222624475630665310
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

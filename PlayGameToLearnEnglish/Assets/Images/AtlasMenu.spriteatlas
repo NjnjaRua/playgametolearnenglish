@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AtlasMenu
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 2
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 96e10e509308d7343bd518bc9dea6c23, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 7260d74127c3fe944b31013b6ce4103f, type: 3}
+  - {fileID: 21300000, guid: bbac9827bb8b8f24e92585f91d6479e6, type: 3}
+  - {fileID: 21300000, guid: aeb50f78a71514a42858db2b8d31fc5e, type: 3}
+  - {fileID: 21300000, guid: ef68d38b21d719d4eb4cd91ea1a058e2, type: 3}
+  - {fileID: 21300000, guid: 6eb5900c9887cb949898143637fbacf7, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - img_sport_quiz
+  - img_basic_quiz
+  - img_food_quiz
+  - img_city_quiz
+  - img_animal_quiz
+  m_Tag: AtlasMenu
+  m_IsVariant: 0

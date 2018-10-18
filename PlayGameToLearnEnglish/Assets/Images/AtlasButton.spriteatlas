@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AtlasButton
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 2
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 512
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 6f67d99a05cc8814fba83b013ad02b23, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 4908b271869a2774d8d202223372ec0f, type: 3}
+  - {fileID: 21300000, guid: 6dadd4715f988094b841f264c50d3a55, type: 3}
+  - {fileID: 21300000, guid: 962481548bb8c0347ad436a5951a9fde, type: 3}
+  - {fileID: 21300000, guid: f78873b41b5de8e4cac8133112684a48, type: 3}
+  - {fileID: 21300000, guid: 008f34e7c49f8a940b1d6ab750261830, type: 3}
+  - {fileID: 21300000, guid: 0388da18c73428249b476926fb6b8ec8, type: 3}
+  - {fileID: 21300000, guid: d070782956b99e44a89f2e02c11bf015, type: 3}
+  - {fileID: 21300000, guid: c1230c89aae14a445ad286064378233b, type: 3}
+  - {fileID: 21300000, guid: d9b5482c74a28ff45bccb3e260a04c36, type: 3}
+  - {fileID: 21300000, guid: 727daf1d611f1004cb2385408e45a4f9, type: 3}
+  - {fileID: 21300000, guid: f21838ef9f8dc2c489d3bc0529e6e00c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - bt_rate_press
+  - bt_diamond_press
+  - bt_diamond
+  - button_fb
+  - bt_highscore
+  - bt_highscore_press
+  - bt_back
+  - button_fb_press
+  - bt_sound_off
+  - bt_rate
+  - bt_sound_on
+  m_Tag: AtlasButton
+  m_IsVariant: 0
