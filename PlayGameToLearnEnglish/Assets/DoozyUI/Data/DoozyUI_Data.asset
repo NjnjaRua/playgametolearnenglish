@@ -15,6 +15,7 @@ MonoBehaviour:
   - elementName: ~Element Name~
   - elementName: MAIN_MENU
   - elementName: POPUP_CATEGORIES_QUIZ
+  - elementName: POPUP_QUIZ_MAIN
   elementSounds:
   - soundName: ~No Sound~
   - soundName: Cartoon Siren Whistle In

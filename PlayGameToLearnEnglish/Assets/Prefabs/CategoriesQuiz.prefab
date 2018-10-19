@@ -188,7 +188,7 @@ MonoBehaviour:
   gridCategoriesQuiz: {fileID: 114674529891980090}
   categoriesQuizItemPrefab: {fileID: 1107902294891684, guid: 44b5c649962388a45b2836c02ff8e734,
     type: 2}
-  listCategoriesIcon: 0f00000010000000110000001200000013000000
+  listCategoriesIcon: 0f0000000c0000000d0000000e0000000f000000
   listCategoriesName:
   - Classic Quiz
   - Animals Quiz
@@ -411,16 +411,16 @@ MonoBehaviour:
   fadeOutSoundAtStart: ~No Sound~
   fadeOutSoundAtFinish: ~No Sound~
   showHelp: 0
-  LANDSCAPE: 1
+  LANDSCAPE: 0
   PORTRAIT: 1
   linkedToNotification: 0
   useCustomStartAnchoredPosition: 0
   customStartAnchoredPosition: {x: 0, y: 0, z: 0}
   elementNameReference:
     elementName: ~Element Name~
-  startHidden: 0
+  startHidden: 1
   animateAtStart: 0
-  disableWhenHidden: 0
+  disableWhenHidden: 1
   selectedButton: {fileID: 0}
   autoRegister: 1
   isVisible: 1

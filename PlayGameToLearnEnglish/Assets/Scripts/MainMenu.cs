@@ -39,6 +39,7 @@ public class MainMenu : BasePopup {
     public void OnShowPopup()
     {
         base.ShowPopup();
+        OnInit();
     }
 
     public void OnHidePopup()

@@ -773,7 +773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteAtlas: {fileID: 4343727234628468602, guid: 25fcdbe3b489e944b98bafdf1c193cf2,
     type: 2}
-  spriteType: 9
+  spriteType: 6
   img: {fileID: 114670793697571724}
 --- !u!114 &114108497546893342
 MonoBehaviour:
@@ -1440,7 +1440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteAtlas: {fileID: 4343727234628468602, guid: 25fcdbe3b489e944b98bafdf1c193cf2,
     type: 2}
-  spriteType: 10
+  spriteType: 7
   img: {fileID: 114676234932320868}
 --- !u!114 &114962036016917018
 MonoBehaviour:

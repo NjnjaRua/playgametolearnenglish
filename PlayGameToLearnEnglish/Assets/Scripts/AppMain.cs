@@ -16,14 +16,21 @@ public class AppMain : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.Escape))
+        /*if(Input.GetKey(KeyCode.Escape))
         {
             if (puManager == null)
                 puManager = PopupManager.getInstance();
             if (puManager != null)
             {
-                puManager.OnHidePopupCategoriesQuizForBackKey();
+                if(puManager.quizMain != null && puManager.quizMain.IsOnScreen())
+                {
+                    puManager.OnHideQuizMainForBackKey();
+                }
+                else if(puManager.categoriesQuiz != null && puManager.categoriesQuiz.IsOnScreen())
+                {
+                    puManager.OnHidePopupCategoriesQuizForBackKey();
+                }
             }
-        }
+        }*/
     }
 }

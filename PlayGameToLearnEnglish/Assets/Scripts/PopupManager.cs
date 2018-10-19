@@ -18,7 +18,10 @@ public class PopupManager : MonoBehaviour {
     private MainMenu mainMenu;
 
     [SerializeField]
-    private CategoriesQuiz categoriesQuiz;
+    public CategoriesQuiz categoriesQuiz;
+
+    [SerializeField]
+    public QuizMain quizMain;
 
     private void Awake()
     {
@@ -148,20 +151,53 @@ public class PopupManager : MonoBehaviour {
 
     public void OnHidePopupCategoriesQuizForBackKey()
     {
-        if (mainMenu == null)
+        if (categoriesQuiz == null)
             return;
-        GetPopup(categoriesQuiz, (s1, s2) =>
+        categoriesQuiz.HidePopupForBackKey();
+        OnShowPopupMainMenu();
+    }
+
+    public void OnShowPopupQuizMain()
+    {
+        if (quizMain == null)
+            return;
+        GetPopup(quizMain, (s1, s2) =>
         {
             if (s2 != null)
             {
-                CategoriesQuiz categoriesQuiz = s2.GetComponent<CategoriesQuiz>();
-                if (categoriesQuiz != null)
+                QuizMain quiz = s2.GetComponent<QuizMain>();
+                if (quiz != null)
                 {
-                    categoriesQuiz.HidePopupForBackKey();
-                    OnShowPopupMainMenu();
+                    quiz.OnShowPopup();
                 }
             }
         });
     }
+
+    public void OnHidePopupQuizMain()
+    {
+        if (quizMain == null)
+            return;
+        GetPopup(quizMain, (s1, s2) =>
+        {
+            if (s2 != null)
+            {
+                QuizMain quiz = s2.GetComponent<QuizMain>();
+                if (quiz != null)
+                {
+                    quiz.OnHidePopup();
+                }
+            }
+        });
+    }
+
+    public void OnHideQuizMainForBackKey()
+    {
+        if (quizMain == null)
+            return;
+        quizMain.HidePopupForBackKey();
+        OnShowPopupCategoriesQuiz();
+    }
+
     #endregion
 }

@@ -19,9 +19,12 @@ public class CategoriesQuizItem : MonoBehaviour {
     int curLevel;
     int maxLevel;
 
+    PopupManager puManager;
+
 	// Use this for initialization
 	void Start () {
-
+        if (puManager == null)
+            puManager = PopupManager.getInstance();
     }
 
     public void OnUpdateData(Util.SpriteType spriteType, string categoriesName)
@@ -44,5 +47,14 @@ public class CategoriesQuizItem : MonoBehaviour {
             return;
         progress.maxValue = maxLevel;
         progress.value = curLevel;
+    }
+
+    public void OnOpenCategory()
+    {
+        Debug.Log("OnOpenCategory");
+        if (puManager == null)
+            return;
+        puManager.HideAllPopup();
+        puManager.OnShowPopupQuizMain();
     }
 }

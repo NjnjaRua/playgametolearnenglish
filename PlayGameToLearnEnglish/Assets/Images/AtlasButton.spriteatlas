@@ -44,28 +44,42 @@ SpriteAtlas:
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 478f3821673747e45b91ba013662777d, type: 3}
   - {fileID: 21300000, guid: 4908b271869a2774d8d202223372ec0f, type: 3}
   - {fileID: 21300000, guid: 6dadd4715f988094b841f264c50d3a55, type: 3}
+  - {fileID: 21300000, guid: 28a8e8b1ca2074c419594d30e3bc3766, type: 3}
+  - {fileID: 21300000, guid: 3b27d442f88a40040bee28e8b59767ca, type: 3}
+  - {fileID: 21300000, guid: f1cacfa31a015cf40bafa7d7b7949012, type: 3}
   - {fileID: 21300000, guid: 962481548bb8c0347ad436a5951a9fde, type: 3}
   - {fileID: 21300000, guid: f78873b41b5de8e4cac8133112684a48, type: 3}
+  - {fileID: 21300000, guid: 4ad448673a1532c4981e6a4a3a403cd7, type: 3}
   - {fileID: 21300000, guid: 008f34e7c49f8a940b1d6ab750261830, type: 3}
   - {fileID: 21300000, guid: 0388da18c73428249b476926fb6b8ec8, type: 3}
   - {fileID: 21300000, guid: d070782956b99e44a89f2e02c11bf015, type: 3}
   - {fileID: 21300000, guid: c1230c89aae14a445ad286064378233b, type: 3}
+  - {fileID: 21300000, guid: cdede80ad22eae547836dcaf5a905148, type: 3}
   - {fileID: 21300000, guid: d9b5482c74a28ff45bccb3e260a04c36, type: 3}
   - {fileID: 21300000, guid: 727daf1d611f1004cb2385408e45a4f9, type: 3}
+  - {fileID: 21300000, guid: f099557feb1f7c74999162e4a759bf71, type: 3}
   - {fileID: 21300000, guid: f21838ef9f8dc2c489d3bc0529e6e00c, type: 3}
   m_PackedSpriteNamesToIndex:
+  - bt_skip_press
   - bt_rate_press
   - bt_diamond_press
+  - bt_score
+  - bt_hint
+  - bt_skip
   - bt_diamond
   - button_fb
+  - bt_hint_press
   - bt_highscore
   - bt_highscore_press
   - bt_back
   - button_fb_press
+  - bt_remove
   - bt_sound_off
   - bt_rate
+  - bt_remove_press
   - bt_sound_on
   m_Tag: AtlasButton
   m_IsVariant: 0

@@ -6,26 +6,26 @@ public class Util
 {
     public enum SpriteType
     {
-        none,
+        none = 0,
         bt_back = 1,
         bt_diamond = 2,
-        bt_diamond_press = 3,
-        bt_highscore = 4,
-        bt_highscore_press = 5,
-        bt_rate = 6,
-        bt_rate_press = 7,
-        bt_sound_off = 8,
-        bt_sound_on = 9,
-        button_fb = 10,
-        button_fb_press = 11,
-        Bg_button = 12,
-        banner = 13,
-        BottomBanner = 14,
-        img_basic_quiz = 15,
-        img_animal_quiz = 16,
-        img_city_quiz = 17,
-        img_food_quiz = 18,
-        img_sport_quiz = 19
+        bt_highscore = 3,
+        bt_rate = 4,
+        bt_sound_off = 5,
+        bt_sound_on = 6,
+        button_fb = 7,
+        Bg_button = 8,
+        banner = 9,
+        BottomBanner = 10,
+        img_basic_quiz = 11,
+        img_animal_quiz = 12,
+        img_city_quiz = 13,
+        img_food_quiz = 14,
+        img_sport_quiz = 15,
+        bt_hint = 16,
+        bt_skip = 17,
+        bt_remove = 18,
+        bt_score = 19
 
     }
 }
