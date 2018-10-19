@@ -43,6 +43,6 @@ public class CategoriesQuizItem : MonoBehaviour {
         if (progress == null)
             return;
         progress.maxValue = maxLevel;
-        progress.value = curLevel;s
+        progress.value = curLevel;
     }
 }
