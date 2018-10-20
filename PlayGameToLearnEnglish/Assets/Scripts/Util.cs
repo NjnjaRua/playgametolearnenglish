@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +26,20 @@ public class Util
         bt_hint = 16,
         bt_skip = 17,
         bt_remove = 18,
-        bt_score = 19
+        bt_score = 19,
+        q0_1 = 20,
+        q0_2 = 21,
+        q0_3 = 22,
+        q0_4 = 23
+    }
 
+    public static string NumberFormat(long number)
+    {
+        return number.ToString("N0");
+    }
+
+    public static string NumberFormatFloat(float number)
+    {
+        return String.Format("{0:#,##0.##}", number);
     }
 }

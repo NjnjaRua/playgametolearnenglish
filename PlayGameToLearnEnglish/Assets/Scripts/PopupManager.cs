@@ -157,9 +157,9 @@ public class PopupManager : MonoBehaviour {
         OnShowPopupMainMenu();
     }
 
-    public void OnShowPopupQuizMain()
+    public void OnShowPopupQuizMain(int _quizId)
     {
-        if (quizMain == null)
+        if (_quizId < 0 || quizMain == null)
             return;
         GetPopup(quizMain, (s1, s2) =>
         {
@@ -168,7 +168,7 @@ public class PopupManager : MonoBehaviour {
                 QuizMain quiz = s2.GetComponent<QuizMain>();
                 if (quiz != null)
                 {
-                    quiz.OnShowPopup();
+                    quiz.OnShowPopup(_quizId);
                 }
             }
         });

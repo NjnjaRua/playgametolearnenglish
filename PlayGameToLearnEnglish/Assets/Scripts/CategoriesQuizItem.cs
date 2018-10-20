@@ -54,7 +54,8 @@ public class CategoriesQuizItem : MonoBehaviour {
         Debug.Log("OnOpenCategory");
         if (puManager == null)
             return;
+        int _quizId = 0;
         puManager.HideAllPopup();
-        puManager.OnShowPopupQuizMain();
+        puManager.OnShowPopupQuizMain(_quizId);
     }
 }
