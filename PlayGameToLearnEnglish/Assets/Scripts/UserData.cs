@@ -10,6 +10,7 @@ public class UserData : MonoBehaviour {
     public const string HIGH_SCORE = "NNT_HIGH_SCORE";
     public delegate void CoinChange();
     public static CoinChange OnCoinChange;
+    private Dictionary<ConstantManager.CATEGORY_IDS,int> dicCategoriesLevels;
 
     private void Awake()
     {
@@ -63,5 +64,31 @@ public class UserData : MonoBehaviour {
     public long GetCoin()
     {
         return coin;
+    }
+
+    public void SetCategoryLevel(ConstantManager.CATEGORY_IDS categoryId, int newLevel)
+    {
+        if (dicCategoriesLevels == null || dicCategoriesLevels.Count <= 0)
+            return;
+        int level = -1;
+        if(!dicCategoriesLevels.TryGetValue(categoryId, out level))
+        {
+            Debug.LogError("Not found " + categoryId);
+            return;
+        }
+        dicCategoriesLevels[categoryId] = newLevel;
+    }
+
+    public int GetCategoryLevel(ConstantManager.CATEGORY_IDS categoryId)
+    {
+        if (dicCategoriesLevels == null || dicCategoriesLevels.Count <= 0)
+            return 0;
+        int level = 0;
+        if (!dicCategoriesLevels.TryGetValue(categoryId, out level))
+        {
+            Debug.LogError("Not found " + categoryId);
+            return 0;
+        }
+        return level;
     }
 }

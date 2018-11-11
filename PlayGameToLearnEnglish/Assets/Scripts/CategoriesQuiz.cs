@@ -12,14 +12,6 @@ public class CategoriesQuiz : BasePopup {
     [SerializeField]
     private GameObject categoriesQuizItemPrefab;
 
-    [SerializeField]
-    private List<Util.SpriteType> listCategoriesIcon;
-
-    [SerializeField]
-    private List<string> listCategoriesName;
-
-    const int MAX_CATEGORIES_QUIZ = 5;
-
     // Use this for initialization
     void Start() {
         puManager = PopupManager.getInstance();
@@ -33,13 +25,13 @@ public class CategoriesQuiz : BasePopup {
 
     void OnUpdateCategoriesQuiz()
     {
-        if (gridCategoriesQuiz == null || categoriesQuizItemPrefab ==  null || listCategoriesIcon == null || listCategoriesName == null)
+        if (gridCategoriesQuiz == null || categoriesQuizItemPrefab ==  null)// || listCategoriesIcon == null || listCategoriesName == null)
             return;
         int i = 0, lenChild = gridCategoriesQuiz.transform.childCount;
         for (i = 0; i < lenChild; i++)
             gridCategoriesQuiz.transform.GetChild(i).gameObject.SetActive(false);
         GameObject gObj;
-        for (i = 0; i < MAX_CATEGORIES_QUIZ; i++)
+        for (i = 0; i < ConstantManager.MAX_CATEGORIES_QUIZ; i++)
         {
             gObj = null;
             if (i < lenChild)
@@ -54,7 +46,7 @@ public class CategoriesQuiz : BasePopup {
             if(categoriesQuizItem != null)
             {
                 //todo
-                categoriesQuizItem.OnUpdateData(listCategoriesIcon[i], listCategoriesName[i]);
+                categoriesQuizItem.OnUpdateData((ConstantManager.CATEGORY_IDS)i);
             }
         }
     }

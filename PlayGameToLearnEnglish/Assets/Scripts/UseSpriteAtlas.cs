@@ -8,20 +8,20 @@ public class UseSpriteAtlas : MonoBehaviour {
     
     [SerializeField]
     private SpriteAtlas spriteAtlas;
-
-    [SerializeField]
-    private Util.SpriteType spriteType;
     
     [SerializeField]
     private Image img;
 
-    private Util.SpriteType curSpriteType;
+    private string spriteName;
+
+    private string curSpriteName;
 
     // Use this for initialization
     void Start () {
         if (img == null)
             img = this.GetComponent<Image>();
-        curSpriteType = Util.SpriteType.none;
+        //curSpriteType = Util.SpriteType.none;
+        curSpriteName = "";
     }
 
     void Update()
@@ -31,19 +31,26 @@ public class UseSpriteAtlas : MonoBehaviour {
 
     private void OnChangeSprite()
     {
-        if(img != null && spriteAtlas != null && curSpriteType != spriteType)
+        if(img != null && spriteAtlas != null && curSpriteName != spriteName)
         {
-            curSpriteType = spriteType;
-            string name = spriteType.ToString();
-            img.sprite = spriteAtlas.GetSprite(name);
+            curSpriteName = spriteName;
+            img.sprite = spriteAtlas.GetSprite(curSpriteName);
         }
     }
 
-    public void OnSetSprite(Util.SpriteType spriteType)
+    /*public void OnSetSprite(Util.SpriteType spriteType)
     {
         if (this.spriteType == spriteType)
             return;
         this.spriteType = spriteType;
+        OnChangeSprite();
+    }*/
+
+    public void OnSetSprite(string name)
+    {
+        if (string.IsNullOrEmpty(name) || spriteName == name)
+            return;
+        this.spriteName = name;
         OnChangeSprite();
     }
 }

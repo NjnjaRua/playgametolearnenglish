@@ -5,7 +5,7 @@ SpriteAtlas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: AtlasMenu
+  m_Name: AtlasCategories
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -50,10 +50,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ef68d38b21d719d4eb4cd91ea1a058e2, type: 3}
   - {fileID: 21300000, guid: 6eb5900c9887cb949898143637fbacf7, type: 3}
   m_PackedSpriteNamesToIndex:
-  - img_sport_quiz
-  - img_basic_quiz
-  - img_food_quiz
-  - img_city_quiz
-  - img_animal_quiz
-  m_Tag: AtlasMenu
+  - category_sport
+  - category_basic
+  - category_food
+  - category_city
+  - category_animal
+  m_Tag: AtlasCategories
   m_IsVariant: 0
