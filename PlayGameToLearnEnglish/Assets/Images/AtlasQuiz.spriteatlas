@@ -49,9 +49,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f4897e47ad095ac439df797bf8ca54c9, type: 3}
   - {fileID: 21300000, guid: d2960dbbe727264408e5a69af8df9062, type: 3}
   m_PackedSpriteNamesToIndex:
-  - q0_4
-  - q0_3
-  - q0_2
-  - q0_1
+  - basic_0_3
+  - basic_0_2
+  - basic_0_1
+  - basic_0_0
   m_Tag: AtlasQuiz
   m_IsVariant: 0

@@ -75,7 +75,8 @@ public class MainMenu : BasePopup {
     public void OnPlay()
     {
         Debug.Log("OnPlay");
-        puManager.HideAllPopup();
+        //puManager.HideAllPopup();
+        OnHidePopup();
         puManager.OnShowPopupCategoriesQuiz();
     }
 

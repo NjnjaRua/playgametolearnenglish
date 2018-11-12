@@ -18,10 +18,10 @@ public class PopupManager : MonoBehaviour {
     private MainMenu mainMenu;
 
     [SerializeField]
-    public CategoriesQuiz categoriesQuiz;
+    private CategoriesQuiz categoriesQuiz;
 
     [SerializeField]
-    public QuizMain quizMain;
+    private QuizMain quizMain;
 
     private void Awake()
     {
@@ -76,15 +76,29 @@ public class PopupManager : MonoBehaviour {
     {
         foreach (var item in popupDict.Values)
         {
-            if (item && item.IsOnScreen())
+            if (item != null && item.IsOnScreen())
             {
                item.HidePopup();
             }
         }
     }
 
-#region Show/Hide Popup
+    public MainMenu GetMainMenuPopup()
+    {
+        return mainMenu;
+    }
 
+    public QuizMain GetQuizMainPopup()
+    {
+        return quizMain;
+    }
+
+    public CategoriesQuiz GetCategoriesQuiz()
+    {
+        return categoriesQuiz;
+    }
+
+    #region Show/Hide Popup
     public void OnShowPopupMainMenu()
     {
         if (mainMenu == null)
@@ -153,13 +167,13 @@ public class PopupManager : MonoBehaviour {
     {
         if (categoriesQuiz == null)
             return;
-        categoriesQuiz.HidePopupForBackKey();
+        categoriesQuiz.OnHidePopup();
         OnShowPopupMainMenu();
     }
 
-    public void OnShowPopupQuizMain(int _quizId)
+    public void OnShowPopupQuizMain(ConstantManager.CATEGORY_IDS _categoryId)
     {
-        if (_quizId < 0 || quizMain == null)
+        if (quizMain == null)
             return;
         GetPopup(quizMain, (s1, s2) =>
         {
@@ -168,7 +182,7 @@ public class PopupManager : MonoBehaviour {
                 QuizMain quiz = s2.GetComponent<QuizMain>();
                 if (quiz != null)
                 {
-                    quiz.OnShowPopup(_quizId);
+                    quiz.OnShowPopup(_categoryId);
                 }
             }
         });
@@ -195,7 +209,7 @@ public class PopupManager : MonoBehaviour {
     {
         if (quizMain == null)
             return;
-        quizMain.HidePopupForBackKey();
+        quizMain.OnHidePopup();
         OnShowPopupCategoriesQuiz();
     }
 

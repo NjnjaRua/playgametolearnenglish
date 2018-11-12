@@ -6,6 +6,7 @@ public class ConstantManager : MonoBehaviour {
     private static ConstantManager instance;
 
     public const int MAX_CATEGORIES_QUIZ = 5;
+    public const int MAX_IMAGES_TIP = 4;
 
     private const int CATEGORY_BASIC_MAX_LEVEL = 10;
     private const int CATEGORY_ANIMAL_MAX_LEVEL = 10;
@@ -13,11 +14,13 @@ public class ConstantManager : MonoBehaviour {
     private const int CATEGORY_FOOD_MAX_LEVEL = 10;
     private const int CATEGORY_SPORT_MAX_LEVEL = 10;
 
-    public const string BASIC_SURFIX = "_basic";
-    public const string ANIMAL_SURFIX = "_animal";
-    public const string CITY_SURFIX = "_city";
-    public const string FOOD_SURFIX = "_food";
-    public const string SPORT_SURFIX = "_sport";
+    public const string BASIC_SURFIX = "basic";
+    public const string ANIMAL_SURFIX = "animal";
+    public const string CITY_SURFIX = "city";
+    public const string FOOD_SURFIX = "food";
+    public const string SPORT_SURFIX = "sport";
+
+    public const string UNDERLINE = "_";
 
     public const string CATEGORY_PREFIX = "category";
 

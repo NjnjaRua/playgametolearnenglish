@@ -103,6 +103,7 @@ public class BasePopup : MonoBehaviour {
 
 	public virtual void OnShowFinish()
 	{
+        
 	}
 
 	public virtual void OnHideFinish()

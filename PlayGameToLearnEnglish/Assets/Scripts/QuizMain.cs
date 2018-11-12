@@ -24,18 +24,18 @@ public class QuizMain : BasePopup {
 
     PopupManager puManager;
     UserData userData;
-    int quizId;
-    
+    ConstantManager.CATEGORY_IDS categoryId;
+    int curCategoryLevel;
+
     // Use this for initialization
     void Start () {
         puManager = PopupManager.getInstance();
         userData = UserData.GetInstance();
     }
 
-    public void OnShowPopup(int _quizId)
+    public void OnShowPopup(ConstantManager.CATEGORY_IDS _categoryId)
     {
-        if (_quizId < 0)
-            return;
+        this.categoryId = _categoryId;
         ShowPopup();
         OnUpdate();
     }
@@ -50,6 +50,8 @@ public class QuizMain : BasePopup {
         if (userData == null)
             userData = UserData.GetInstance();
         coin.text = Util.NumberFormat(userData.GetCoin());
+        curCategoryLevel = userData.GetCategoryLevel(this.categoryId);
+        titleText.text = "Level " + Util.NumberFormat(curCategoryLevel + 1);
         OnUpdateImages();
     }
 
@@ -61,7 +63,7 @@ public class QuizMain : BasePopup {
         for (i = 0; i < lenChild; i++)
             gridImages.transform.GetChild(i).gameObject.SetActive(false);
         GameObject gObj;
-        for (i = 0; i < 4; i++)
+        for (i = 0; i < ConstantManager.MAX_IMAGES_TIP; i++)
         {
             gObj = null;
             if (i < lenChild)
@@ -73,16 +75,13 @@ public class QuizMain : BasePopup {
             }
             gObj.SetActive(true);
             //todo update image
+            UseSpriteAtlas userSpriteAtlas = gObj.GetComponent<UseSpriteAtlas>();
+            if (userSpriteAtlas != null)
+            {
+                string spriteName = ConstantManager.BASIC_SURFIX + ConstantManager.UNDERLINE + curCategoryLevel + ConstantManager.UNDERLINE + i;
+                userSpriteAtlas.OnSetSprite(spriteName);
+            }
         }
-    }
-
-    public void OnBack()
-    {
-        //back Categories quiz
-        if (puManager == null)
-            return;
-        OnHidePopup();
-        puManager.OnShowPopupCategoriesQuiz();
     }
 
     public void OnOpenLetter()

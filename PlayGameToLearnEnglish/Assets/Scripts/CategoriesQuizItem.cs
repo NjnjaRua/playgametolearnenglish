@@ -21,46 +21,20 @@ public class CategoriesQuizItem : MonoBehaviour {
     int maxLevel;
 
     PopupManager puManager;
+    ConstantManager.CATEGORY_IDS categoryId;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         if (puManager == null)
             puManager = PopupManager.getInstance();
     }
 
-    public void OnUpdateData(ConstantManager.CATEGORY_IDS categoryId)
+    public void OnUpdateData(ConstantManager.CATEGORY_IDS _categoryId)
     {
-        string spriteName = "";
-        switch(categoryId)
-        {
-            case ConstantManager.CATEGORY_IDS.BASIC:
-                spriteName = ConstantManager.CATEGORY_PREFIX + ConstantManager.BASIC_SURFIX;    
-                break;
-
-            case ConstantManager.CATEGORY_IDS.ANIMAL:
-                spriteName = ConstantManager.CATEGORY_PREFIX + ConstantManager.ANIMAL_SURFIX;
-                break;
-
-            case ConstantManager.CATEGORY_IDS.CITY:
-                spriteName = ConstantManager.CATEGORY_PREFIX + ConstantManager.CITY_SURFIX;
-                break;
-
-            case ConstantManager.CATEGORY_IDS.FOOD:
-                spriteName = ConstantManager.CATEGORY_PREFIX + ConstantManager.FOOD_SURFIX;
-                break;
-
-            case ConstantManager.CATEGORY_IDS.SPORT:
-                spriteName = ConstantManager.CATEGORY_PREFIX + ConstantManager.SPORT_SURFIX;
-                break;
-
-            default:
-                break;
-        }
+        this.categoryId = _categoryId;
         UseSpriteAtlas userSpriteAtlas = icon.GetComponent<UseSpriteAtlas>();
         if(userSpriteAtlas != null)
-        {
-            userSpriteAtlas.OnSetSprite(spriteName);
-        }
+            userSpriteAtlas.OnSetSprite(Util.GetSpriteName(_categoryId));
         name.text = categoryId.ToString();
         curLevel = UserData.GetInstance().GetCategoryLevel(categoryId);
         maxLevel = ConstantManager.GetInstance().GetMaxLevelOfCategory(categoryId);
@@ -81,8 +55,7 @@ public class CategoriesQuizItem : MonoBehaviour {
         Debug.Log("OnOpenCategory");
         if (puManager == null)
             return;
-        int _quizId = 0;
         puManager.HideAllPopup();
-        puManager.OnShowPopupQuizMain(_quizId);
+        puManager.OnShowPopupQuizMain(categoryId);
     }
 }

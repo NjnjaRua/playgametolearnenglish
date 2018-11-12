@@ -188,13 +188,6 @@ MonoBehaviour:
   gridCategoriesQuiz: {fileID: 114674529891980090}
   categoriesQuizItemPrefab: {fileID: 1107902294891684, guid: 44b5c649962388a45b2836c02ff8e734,
     type: 2}
-  listCategoriesIcon: 0f0000000c0000000d0000000e0000000f000000
-  listCategoriesName:
-  - Classic Quiz
-  - Animals Quiz
-  - Food-Fruit Quiz
-  - City-Country Quiz
-  - Sprot Quiz
 --- !u!114 &114527709095929494
 MonoBehaviour:
   m_ObjectHideFlags: 1

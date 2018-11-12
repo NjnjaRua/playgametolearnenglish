@@ -460,9 +460,9 @@ MonoBehaviour:
   customStartAnchoredPosition: {x: 0, y: 0, z: 0}
   elementNameReference:
     elementName: ~Element Name~
-  startHidden: 0
+  startHidden: 1
   animateAtStart: 0
-  disableWhenHidden: 0
+  disableWhenHidden: 1
   selectedButton: {fileID: 0}
   autoRegister: 1
   isVisible: 1
